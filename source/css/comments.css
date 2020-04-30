@@ -1,0 +1,178 @@
+/* comments */
+#idc-container-parent {
+  margin-top: 2em;
+}
+
+#idc-container .idc-head, #idc-container .idc-foot, #idc-container .idc-collapselink, #idc-container .idc-thread_active, #idc-container h3, #idc-container .idc-postnav, #idc-container .idc-thread .idc-thread .idc-thread .idc-btn_s, #idc-container #IDCommentsNoCommentsDiv {
+  display: none;
+}
+
+#idc-container .idc-c .idc-c-h {
+  background: none !important;
+}
+
+#idc-container div {
+  font-size: inherit;
+}
+
+#idc-container .idc-c .idc-i, #idc-container .idc-c-t, #idc-container .idc-c .idc-c-h-inner, #idc-container .idc-c {
+  margin: 0;
+  padding: 0;
+}
+
+#idc-container a {
+  -webkit-transition-duration: .3s;
+  -webkit-transition-property: border-bottom;
+  border-bottom: 3px solid var(--link-color) !important;
+  transition-duration: .3s;
+  transition-property: border-bottom;
+}
+
+#idc-container a:hover {
+  -webkit-transition-duration: .3s;
+  -webkit-transition-property: border-bottom;
+  border-bottom: 3px solid var(--link-hover-color) !important;
+  transition-duration: .3s;
+  transition-property: border-bottom;
+}
+
+/* single comment */
+#idc-container-parent #idc-container .idc-c {
+  align-items: flex-start;
+  background: none;
+  border-top: 1px solid var(--tertiary-color);
+  display: flex;
+  flex-direction: column;
+  padding-top: 1em;
+}
+
+/* byline */
+p.idc-i::before {
+  content: "by ";
+}
+
+#idc-container .idc-i {
+  font-size: 1em;
+}
+
+#idc-container .idc-c .idc-i span, #idc-container .idc-c .idc-i > a {
+  border-bottom: none;
+  color: inherit;
+  float: none;
+  font: 1em var(--secondary-stack);
+  letter-spacing: 0.1em !important;
+  margin-right: -0.2em;
+  text-transform: uppercase;
+}
+
+#idc-container .idc-c .idc-time a, #idc-container .idc-c .idc-time {
+  color: inherit;
+  font-size: inherit;
+  font-style: inherit;
+}
+
+#idc-container .idc-c .idc-c-h {
+  background: none;
+  font-size: 0.9em;
+  margin-bottom: 1em;
+  order: 1;
+}
+
+#idc-container .idc-c .idc-time a:hover {
+  text-decoration: none;
+}
+
+/* reply button */
+#idc-container .idc-c-b {
+  align-self: flex-end;
+}
+
+#idc-container .idc-c .idc-time a, #idc-container .idc-c .idc-time, #idc-container .idc-c-b a, #idc-container .idc-c-b a, #idc-container .idc-c .idc-i > a {
+  border-bottom: none !important;
+}
+
+#idc-container .idc-c-b a {
+  -webkit-transition-duration: .3s;
+  -webkit-transition-property: background;
+  transition-duration: .3s;
+  transition-property: background;
+}
+ 
+#idc-container .idc-c-b a:hover {
+  -webkit-transition-duration: .3s;
+  -webkit-transition-property: background;
+  background: var(--link-bg-color) !important;
+  transition-duration: .3s;
+  transition-property: background;
+}
+
+.idc-r {
+  color: var(--secondary-color);
+  font: 0.9em var(--secondary-stack);
+}
+
+#idc-container .idc-btn_s {
+  position: relative;
+  top: 1.6em;
+}
+
+#idc-container strong, #idc-container .idc-c-t b {
+  font-weight: normal !important;
+}
+
+/* replies */
+#idc-container-parent #idc-container .idc-thread .idc-thread, #idc-container-parent #idc-container .idc-thread .idc-thread .idc-thread {
+  border-left: 1px solid var(--tertiary-color);
+  border-top: none !important;
+  margin-left: 1em;
+  padding: 0 !important;
+}
+
+#idc-container-parent #idc-container .idc-thread .idc-thread .idc-c {
+  border-top: 0;
+  padding: 0.75rem 0 0 1rem;
+  margin-bottom: 1em;
+}
+
+#idc-container .idc-right {
+  position: relative;
+  top: 1em;
+}
+
+#idc-container .idc-btn_l, #idc-container .idc-btn_l-secondary {
+  position: relative;
+  top: -1.75em;
+}
+
+/* new comment */
+#idc-container div.idc-text_noresize, #idc-container textarea.idc-text_noresize, #idc-container .idc-text {
+  background: none;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: inherit !important;
+  font: inherit;
+  height: auto !important;
+  margin: 1em 0;
+  padding: 0.5em;
+  width: 100% !important;
+}
+
+#idc-container .idc-reply .idc-c-t, #idc-container .idc-c-m {
+  width: 100%;
+}
+
+#idc-container .idc-c-m .idc-column-wide, #idc-container .idc-c-m .idc-column {
+  width: 50%;
+}
+
+#idc-container .idc-c-m .idc-text {
+  bottom: 1.8em;
+  left: 25%;
+  margin: 0;
+  position: relative;
+  width: 75% !important;
+}
+
+#IDCColumnEmailLabel label, #IDCColumnEmailReplyLabel label {
+  padding-left: 0.5em !important;
+}

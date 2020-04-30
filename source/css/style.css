@@ -1,0 +1,317 @@
+@import url('//fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:wght@400;900&display=swap');
+ 
+/* responsive stuff */
+@media all and (min-width:760px) {body {font-size: 20px}}
+@media all and (max-width:760px) {body {font-size: 19px}}
+@media all and (max-width:720px) {body {font-size: 18px}}
+@media all and (max-width:680px) {body {font-size: 17px}}
+@media all and (max-width:640px) {body {font-size: 16px}}
+@media all and (max-width:600px) {body {font-size: 15px}}
+@media all and (max-width:560px) {body {font-size: 14px}}
+@media all and (max-width:520px) {body {font-size: 13px}}
+@media all and (max-width:400px) {body {font-size: 12px}}
+@media all and (max-width:360px) {body {font-size: 11px}}
+@media all and (max-width:330px) {body {font-size: 10px}}
+@media all and (max-width:300px) {body {font-size: 9px}}
+ 
+/* general */
+:root {
+  --bg-color: #fafafa;
+  --code-bg-color: #f4f4f4;
+  --text-color: #212121;
+  --secondary-color: #808080;
+  --tertiary-color: #b0b0b0;
+  --link-color: #b5c8cf;
+  --link-hover-color: #618794;
+  --link-bg-color: #dae4e7;
+  --selection-color: #dae4e7;
+  --body-stack: "Lora", "Georgia", "Times New Roman", serif;
+  --secondary-stack: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Verdana", sans-serif;
+  --title-stack: "Playfair Display SC", "Georgia", serif;
+}
+
+html {
+  height: 100%;
+}
+ 
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--body-stack);
+  margin: auto;
+  min-height: 100%;
+  position: relative;
+  width: 100%;
+}
+ 
+/* wrapper */
+#wrapper {
+  background: none;
+  border: none;
+  display: block;
+  margin: 3rem auto 10rem auto;
+  width: 30em;
+}
+ 
+@media all and (max-width:760px) {#wrapper {margin-top: 3rem;}}
+@media all and (max-width:520px) {#wrapper {margin-top: 1rem;}}
+ 
+/* header */
+#header {
+  border-bottom: solid 1px var(--secondary-color);
+  line-height: 0.6em;
+  padding: 0.25em 0;
+}
+ 
+#title {
+  font-family: var(--title-stack);
+  font-size: 2em;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  margin: 1em 0;
+  text-align: center;
+}
+
+#header nav {
+  margin: 2em 0;
+  text-align: center;
+}
+
+.nav-link, .nav-spacer {
+  font-family: var(--secondary-stack);
+  color: var(--secondary-color);
+}
+
+.nav-spacer {
+  margin: 0 0.5em;
+}
+
+/* posts */
+.article {
+  border-bottom: solid 1px var(--secondary-color);
+  margin: 2em 0;
+  padding-bottom: 1em;
+}
+
+.article-header {
+  margin-bottom: 1.75em;
+  text-align: center;
+}
+ 
+.article-title {
+  font-family: var(--title-stack);
+  font-size: 2em;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  margin-bottom: .25em;
+}
+
+.article-entry {
+  line-height: 1.5;
+  margin-bottom: 1em;
+  overflow: hidden;
+}
+ 
+.article-meta, .archive-article-date, .article-nav, .page-nav, .article-footer, .archive-article-word-count {
+  color: var(--secondary-color);
+  font-family: var(--secondary-stack);
+  font-size: 0.9em;
+  height: auto;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+@media all and (max-width:760px) {
+  .article-meta, .archive-article-date, .article-nav, .page-nav, .article-footer, .archive-article-word-count {
+    font-size: 1em;
+  }
+}
+
+/* archive */
+.archives-wrap {
+  margin: 0.25em 0;
+  position: relative;
+  top: 0.5em;
+}
+
+.month {
+  color: var(--secondary-color);
+  cursor: pointer;
+  font-family: var(--secondary-stack);
+}
+
+.hidden, .hidden-input {
+  display: none;
+  margin-bottom: 1em;
+}
+
+.hidden-input ~ .month::before {
+  content: "+ ";
+  position: absolute;
+  left: -1em;
+}
+
+.hidden-input:checked ~ .month::before {
+  content: "– ";
+}
+
+.hidden-input:checked ~ .hidden {
+  display: block;
+}
+
+.archive-article {
+  margin: 0.25em 0;
+  position: relative;
+}
+
+.archive-article-date {
+  position: absolute;
+  right: calc(100% - 1.5em);
+}
+
+.archive-article-word-count {
+  margin-left: 0.5em;
+}
+
+.archive-article-title {
+  font: inherit;
+  left: 2em;
+  margin: 0.25em 0;
+  position: relative;
+  width: 28em;
+}
+
+.article-nav {
+  display: flex;
+  margin: 2em 0;
+}
+
+#article-nav-older, #article-nav-newer {
+  flex-basis: 50%;
+}
+
+#article-nav-newer {
+  order: 1;
+  text-align: right;
+}
+
+/* pagination */
+.page-nav {
+  margin: 1em 0;
+  text-align: center;
+}
+
+.page-number, .space, .extend {
+  font-size: 1.3em;
+  margin: 0 0.4em;
+}
+
+.current {
+  color: var(--text-color);
+}
+ 
+/* typography */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p, ul, ol {
+  margin: 0 0 1em 0;
+}
+
+ul, ol {
+  padding-left: 1em;
+}
+
+pre {
+  background-color: var(--code-bg-color);
+  margin: 0;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+.highlight {
+  margin: 1em 0;
+}
+
+.highlight .gutter {
+  display: none;
+  margin: 0;
+  background-color: var(--code-bg-color);
+  padding: 10px;
+}
+
+h3 {
+  font-size: 0.9em;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+blockquote {
+  display: block;
+  margin: 0 0 1em;
+  padding-left: .75rem;
+  border-left: 1px solid var(--tertiary-color);
+}
+
+.katex {
+  font-size: 1.1em;
+}
+
+.article-entry a {
+  -webkit-transition-duration: .3s;
+  -webkit-transition-property: border-bottom;
+  border-bottom: 3px solid var(--link-color);
+  transition-duration: .3s;
+  transition-property: border-bottom;
+}
+ 
+.article-entry a:hover {
+  -webkit-transition-duration: .3s;
+  -webkit-transition-property: border-bottom;
+  border-bottom: 3px solid var(--link-hover-color);
+  transition-duration: .3s;
+  transition-property: border-bottom;
+}
+
+#title a, .article-title a, a.nav-link, .archive-article-title a, .article-nav a, a.page-number, a.extend, .month, .article-footer a {
+  -webkit-transition-duration: .3s;
+  -webkit-transition-property: background;
+  transition-duration: .3s;
+  transition-property: background;
+}
+ 
+#title a:hover, .article-title a:hover, a.nav-link:hover, .archive-article-title a:hover, .article-nav a:hover, a.page-number:hover, a.extend:hover, .month:hover, .article-footer a:hover {
+  -webkit-transition-duration: .3s;
+  -webkit-transition-property: background;
+  background: var(--link-bg-color) !important;
+  transition-duration: .3s;
+  transition-property: background;
+}
+ 
+/* miscellaneous */
+img {
+  width: 100%;
+}
+ 
+::selection {
+  background-color: var(--selection-color);
+}
+
+#settings-container {
+  background: var(--tertiary-color);
+  bottom: 0;
+  position: fixed;
+  right: 0;
+}
+
+#sans-font, #dark-mode {
+  cursor: pointer;
+  float: right;
+  padding: 0.5em;
+}

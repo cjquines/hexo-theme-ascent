@@ -1,0 +1,49 @@
+<article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemprop="blogPost" itemscope>
+  <div class="article-inner">
+    <% if (post.link || post.title){ %>
+      <header class="article-header">
+        <%- partial('post/title', {class_name: 'article-title'}) %>
+        <div class="article-meta">
+          <%- partial('post/date', {class_name: 'article-date', date_format: 'MMMM D, YYYY, h:mm A'}) %>
+          <% if (theme.word_count){ %>
+            × <span class="article-word-count"><%= wordcount(post.content) %> words</span>
+            <% if (min2read(post.content) == 1){ %>
+            × <span class="article-time-to-read"><%= min2read(post.content) %> minute</span>
+            <% } else { %>
+            × <span class="article-time-to-read"><%= min2read(post.content) %> minutes</span>
+            <% } %>
+          <% } %>
+        </div>
+      </header>
+    <% } %>
+    <div class="article-entry" itemprop="articleBody">
+      <% if (post.excerpt && index){ %>
+        <%- post.excerpt %>
+        <% if (theme.excerpt_link){ %>
+          <p class="article-more-link">
+            <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+          </p>
+        <% } %>
+      <% } else { %>
+        <%- post.content %>
+      <% } %>
+    </div>
+    <% if (index && theme.intensedebate.enable && theme.intensedebate.acct){ %>
+      <footer class="article-footer">
+        <a href="<%- url_for(post.path) %>#idc-container">Comments</a>
+      </footer>
+    <% } %>
+  </div>
+</article>
+<% if (!index){ %>
+  <%- partial('post/nav') %>
+<% } %>
+<% if (!index && post.comments && theme.intensedebate.enable && theme.intensedebate.acct){ %>
+  <script>
+  var idcomments_acct = '<%= theme.intensedebate.acct %>';
+  var idcomments_post_id;
+  var idcomments_post_url;
+  </script>
+  <span id="IDCommentsPostTitle" style="display:none"></span>
+  <script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+<% } %>

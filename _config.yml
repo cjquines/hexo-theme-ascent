@@ -1,0 +1,27 @@
+# Header
+menu:
+  Home: /
+  Archives: /archives
+rss: /atom.xml
+
+# Content
+excerpt_link: read more
+
+# Favicon
+# favicon: /favicon.ico
+
+# Settings toggle
+settings: true
+
+# Word count (needs hexo-wordcount)
+word_count: false
+
+# Google Analytics
+google_analytics:
+  enable: false
+  acct: "UA-000000000-0"
+
+# IntenseDebate ID
+intensedebate:
+  enable: false
+  acct: "00000000000000000000000000000000"

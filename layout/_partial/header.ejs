@@ -1,0 +1,14 @@
+<header id="header">
+  <h1 id="title">
+    <a href="<%- url_for() %>"><%= config.title %></a>
+  </h1>
+  <nav>
+    <% for (var i in theme.menu){ %>
+      <a class="nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+      <span class="nav-spacer">×</span>
+    <% } %>
+    <% if (theme.rss){ %>
+      <a class="nav-link" href="<%- url_for(theme.rss) %>"><%= __('rss_feed') %></a>
+    <% } %>
+  </nav>
+</header>

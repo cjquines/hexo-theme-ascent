@@ -1,0 +1,40 @@
+<% if (pagination == 2){ %>
+  <% page.posts.each(function(post){ %>
+    <%- partial('article', {post: post, index: true}) %>
+  <% }) %>
+<% } else { %>
+  <section class="archives-wrap" style="margin-bottom: 0.5em;">
+    <input class="hidden-input" type="checkbox" onClick="tgl(this)" id="toggle-all">
+    <label class="month" for="toggle-all">Toggle all</label>
+  </section>
+  <% var last; %>
+  <% var i = 0; %>
+  <% page.posts.each(function(post, i){ %>
+    <% var date_obj = post.date; %>
+    <% var month = post.date.month(); %>
+    <% if (last != month){ %>
+      <% if (last != null){ %>
+        </div></section>
+      <% } %>
+      <% last = month; %>
+      <% i = i + 1 %>
+      <section class="archives-wrap">
+        <input class="hidden-input" type="checkbox" name="expand" id="<%= 'expand' + i %>">
+        <label class="month" for="<%= 'expand' + i %>"><%= date(date_obj, "MMMM YYYY") %></label>
+        <div class="archives hidden">
+    <% } %>
+    <%- partial('archive-post', {post: post}) %>
+  <% }) %>
+  <% if (page.posts.length){ %>
+    </div></section>
+  <% } %>
+<% } %>
+<% if (page.total > 1){ %>
+  <nav id="page-nav" class="page-nav">
+    <% var prev_text = "« " + __('prev');var next_text = __('next') + " »"%>
+    <%- paginator({
+      prev_text: prev_text,
+      next_text: next_text
+    }) %>
+  </nav>
+<% } %>
