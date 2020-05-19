@@ -11,6 +11,7 @@
       <a class="nav-link" href="<%- url_for(theme.menu[keys[i]]) %>"><%= keys[i] %></a>
     <% } %>
     <% if (theme.rss){ %>
+      <span class="nav-spacer">×</span>
       <a class="nav-link" href="<%- url_for(theme.rss) %>"><%= __('rss_feed') %></a>
     <% } %>
   </nav>
