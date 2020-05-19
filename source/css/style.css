@@ -77,7 +77,7 @@ body {
   text-align: center;
 }
 
-.nav-link, .nav-spacer {
+.nav-link, .nav-spacer, .article-more-link {
   font-family: var(--secondary-stack);
   color: var(--secondary-color);
 }
@@ -177,9 +177,13 @@ body {
 .archive-article-title {
   font: inherit;
   left: 2em;
+  letter-spacing: 0;
   margin: 0.25em 0;
   position: relative;
   width: 28em;
+  text-align: left;
+  text-decoration: none;
+  text-transform: none;
 }
 
 .article-nav {
@@ -225,31 +229,31 @@ ul, ol {
   padding-left: 1em;
 }
 
-pre {
-  background-color: var(--code-bg-color);
-  margin: 0;
-  overflow-x: auto;
-  padding: 10px;
-}
-
-.highlight {
-  margin: 1em 0;
-}
-
-.highlight .gutter {
-  display: none;
-  margin: 0;
-  background-color: var(--code-bg-color);
-  padding: 10px;
-}
-
-h3 {
-  font-size: 0.9em;
-  font-weight: bold;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
   letter-spacing: 0.1em;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+h1 {
+  font-size: 2em;
+  letter-spacing: 0.2em;
+}
+
+h2 {
+  font-size: 1.5em;
+  letter-spacing: 0.15em;
+}
+
+h3 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+h4, h5, h6 {
+  font-size: 0.9em;
 }
 
 blockquote {

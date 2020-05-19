@@ -13,6 +13,7 @@
 
 #idc-container div {
   font-size: inherit;
+  line-height: 1.5;
 }
 
 #idc-container .idc-c .idc-i, #idc-container .idc-c-t, #idc-container .idc-c .idc-c-h-inner, #idc-container .idc-c {
@@ -34,6 +35,10 @@
   border-bottom: 3px solid var(--link-hover-color) !important;
   transition-duration: .3s;
   transition-property: border-bottom;
+}
+
+#idc-container .idc-thread {
+  margin-bottom: 1rem;
 }
 
 /* single comment */
@@ -74,7 +79,6 @@ p.idc-i::before {
 #idc-container .idc-c .idc-c-h {
   background: none;
   font-size: 0.9em;
-  margin-bottom: 1em;
   order: 1;
 }
 
@@ -131,7 +135,6 @@ p.idc-i::before {
 #idc-container-parent #idc-container .idc-thread .idc-thread .idc-c {
   border-top: 0;
   padding: 0.75rem 0 0 1rem;
-  margin-bottom: 1em;
 }
 
 #idc-container .idc-right {
