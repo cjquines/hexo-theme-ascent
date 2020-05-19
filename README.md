@@ -2,4 +2,4 @@
 
 An opinionated Hexo theme for blogs with long blocks of text.
 
-still fails unit testing; certain features can look bad but shouldn't make anything unusable
+TODO: add picture, longer description, link to demo, installation instructions, theme config, [publish](https://hexo.io/docs/themes.html#Publishing)
