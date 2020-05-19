@@ -2,7 +2,7 @@
 menu:
   Home: /
   Archives: /archives
-rss: /atom.xml
+# rss: /atom.xml
 
 # Content
 excerpt_link: read more
@@ -12,6 +12,9 @@ excerpt_link: read more
 
 # Settings toggle
 settings: true
+
+# Code CSS toggle
+highlight: true
 
 # Word count (needs hexo-wordcount)
 word_count: false
