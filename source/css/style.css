@@ -238,7 +238,6 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.1em;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
 }
 
 h1 {
@@ -254,10 +253,12 @@ h2 {
 h3 {
   font-size: 1em;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 h4, h5, h6 {
   font-size: 0.9em;
+  text-transform: uppercase;
 }
 
 blockquote {
