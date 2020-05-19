@@ -17,6 +17,17 @@
       </header>
     <% } %>
     <div class="article-entry" itemprop="articleBody">
+      <% if (post.photos && post.photos.length){ %>
+      <div class="article-gallery">
+        <div class="article-gallery-photos">
+          <% post.photos.forEach(function(photo, i){ %>
+            <a class="article-gallery-img" data-fancybox="gallery" href="<%- url_for(photo) %>" rel="gallery_<%= post._id %>">
+              <img src="<%- url_for(photo) %>" itemprop="image">
+            </a>
+          <% }) %>
+        </div>
+      </div>
+      <% } %>
       <% if (post.excerpt && index){ %>
         <%- post.excerpt %>
       <% } else { %>
