@@ -1,0 +1,115 @@
+@import url('//fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+/* highlight */
+:root {
+  --highlight-comment-color: #8e908c;
+  --highlight-red-color: #e71818;
+  --highlight-orange-color: #e67c19;
+  --highlight-yellow-color: #d1a505;
+  --highlight-green-color: #8fb300;
+  --highlight-aqua-color: #40b7bf;
+  --highlight-blue-color: #528fe0;
+  --highlight-purple-color: #ab5fdd;
+  --highlight-stack: "Roboto Mono", "Inconsolata", "Consolas", monospace;
+}
+
+code {
+  font-family: var(--highlight-stack);
+}
+
+.highlight td, .highlight th, .highlight table caption, .highlight table td, .highlight table th {
+  border: none;
+  padding: 0;
+}
+
+pre {
+  background-color: var(--code-bg-color);
+  box-sizing: border-box;
+  font-size: 0.8em;
+  font-family: var(--highlight-stack);
+  margin: 0;
+  overflow-x: auto;
+  padding: 0.5em;
+}
+
+pre::-webkit-scrollbar-track {
+  background-color: var(--code-bg-color);
+}
+
+pre::-webkit-scrollbar {
+  height: 0.5em;
+  background-color: var(--code-bg-color);
+}
+
+pre::-webkit-scrollbar-thumb {
+  background-color: var(--tertiary-color);
+}
+
+.highlight {
+  margin: 1em 0;
+  width: 100%;
+}
+
+.highlight .gutter pre {
+  background-color: var(--bg-color);
+  color: var(--secondary-color);
+  padding: 0 0.5em 0 0;
+  text-align: right;
+}
+
+.highlight table, .highlight .gutter pre {
+  overflow-x: hidden;
+  width: 2em;
+}
+
+.highlight .code pre {
+  width: 32em;
+}
+
+pre .comment, pre .title {
+  color: var(--highlight-comment-color);
+}
+
+pre .variable, pre .attribute, pre .tag, pre .regexp, pre .ruby .constant, pre .xml .tag .title, pre .xml .pi, pre .xml .doctype, pre .html .doctype, pre .css .id, pre .css .class, pre .css .pseudo {
+  color: var(--highlight-red-color);
+}
+
+pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+  color: var(--highlight-orange-color);
+}
+
+pre .class, pre .ruby .class .title, pre .css .rules .attribute {
+  color: var(--highlight-green-color);
+}
+
+pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+  color: var(--highlight-green-color);
+}
+
+pre .css .hexcolor {
+  color: var(--highlight-aqua-color);
+}
+
+pre .function, pre .python .decorator, pre .python .title, pre .ruby .function .title, pre .ruby .title .keyword, pre .perl .sub, pre .javascript .title, pre .coffeescript .title {
+  color: var(--highlight-blue-color);
+}
+
+pre .keyword, pre .javascript .function {
+  color: var(--highlight-purple-color);
+}
+
+.highlight .gutter {
+  position: relative;
+  top: -0.2em;
+}
+
+@media all and (min-width:480px) {
+  .highlight .gutter, .highlight .code {
+    left: -2em;
+    position: relative;
+  }
+
+  .highlight .code pre {
+    width: 37.5em;
+  }
+}
