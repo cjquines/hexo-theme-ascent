@@ -109,7 +109,11 @@ body {
 .article-entry {
   line-height: 1.5;
   margin-bottom: 1em;
-  overflow: hidden;
+  overflow: visible;
+}
+
+.article-category {
+  line-height: 1.5;
 }
  
 .article-meta, .archive-article-date, .article-nav, .page-nav, .article-footer, .archive-article-word-count {

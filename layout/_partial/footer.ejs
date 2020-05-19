@@ -2,7 +2,7 @@
   <%- css('css/comments') %>
 <% } %>
 
-<% if (is_archive()){ %>
+<% if (is_archive() || is_category() || is_tag()){ %>
 <script type="text/javascript">
 let tgl=(s)=>{x=document.getElementsByName("expand");for(let i=0;i<x.length;i++)x[i].checked=s.checked;}
 </script>
