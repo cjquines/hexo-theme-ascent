@@ -169,6 +169,11 @@ body {
   position: relative;
 }
 
+.archive-article-header {
+  align-items: center;
+  display: inline-flex;
+}
+
 .archive-article-date {
   position: absolute;
   right: calc(100% - 1.5em);
@@ -182,7 +187,7 @@ body {
   font: inherit;
   left: 2em;
   letter-spacing: 0;
-  margin: 0.25em 0;
+  margin: 0;
   position: relative;
   width: 28em;
   text-align: left;
