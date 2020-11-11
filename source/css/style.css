@@ -1,19 +1,5 @@
 @import url('//fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:wght@400;900&display=swap');
  
-/* responsive stuff */
-@media all and (min-width:760px) {body {font-size: 20px}}
-@media all and (max-width:760px) {body {font-size: 19px}}
-@media all and (max-width:720px) {body {font-size: 18px}}
-@media all and (max-width:680px) {body {font-size: 17px}}
-@media all and (max-width:640px) {body {font-size: 16px}}
-@media all and (max-width:600px) {body {font-size: 15px}}
-@media all and (max-width:560px) {body {font-size: 14px}}
-@media all and (max-width:520px) {body {font-size: 13px}}
-@media all and (max-width:400px) {body {font-size: 12px}}
-@media all and (max-width:360px) {body {font-size: 11px}}
-@media all and (max-width:330px) {body {font-size: 10px}}
-@media all and (max-width:300px) {body {font-size: 9px}}
- 
 /* general */
 :root {
   --bg-color: #fafafa;
@@ -38,6 +24,8 @@ body {
   background: var(--bg-color);
   color: var(--text-color);
   font-family: var(--body-stack);
+  font-size: 16px;
+  font-size: clamp(16px, 2.4vw, 21px);
   margin: auto;
   min-height: 100%;
   position: relative;
@@ -48,9 +36,12 @@ body {
 #wrapper {
   background: none;
   border: none;
+  box-sizing: border-box;
   display: block;
   margin: 3rem auto 10rem auto;
-  width: 30em;
+  max-width: 100%;
+  padding: 1em;
+  width: 32em;
 }
  
 @media all and (max-width:760px) {#wrapper {margin-top: 3rem;}}
@@ -188,8 +179,8 @@ body {
   left: 2em;
   letter-spacing: 0;
   margin: 0;
+  max-width: 25rem;
   position: relative;
-  width: 28em;
   text-align: left;
   text-decoration: none;
   text-transform: none;

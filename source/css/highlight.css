@@ -63,7 +63,8 @@ pre::-webkit-scrollbar-thumb {
 }
 
 .highlight .code pre {
-  width: 32em;
+  max-width: 30rem;
+  width: calc(100vw - 4rem);
 }
 
 pre .comment, pre .title {
@@ -103,13 +104,17 @@ pre .keyword, pre .javascript .function {
   top: -0.2em;
 }
 
-@media all and (min-width:480px) {
+@media all and (min-width:620px) {
   .highlight .gutter, .highlight .code {
     left: -2em;
     position: relative;
   }
 
   .highlight .code pre {
-    width: 37.5em;
+    max-width: 37.5em;
+  }
+
+  .article-entry {
+    overflow: visible;
   }
 }
