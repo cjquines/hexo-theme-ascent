@@ -125,9 +125,15 @@ body {
 
 /* archive */
 .archives-wrap {
-  margin: 0.25em 0;
+  margin: 0.25rem 0;
   position: relative;
-  top: 0.5em;
+  top: 0.5rem;
+}
+
+@media all and (max-width:620px) {
+  .archives-wrap {
+    margin-left: 1rem;
+  }
 }
 
 .month {
@@ -221,8 +227,8 @@ a {
   text-decoration: none;
 }
 
-p, ul, ol {
-  margin: 0 0 1em 0;
+p, ul, ol, h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 1rem 0;
 }
 
 ul, ol {
@@ -236,25 +242,26 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
 }
 
-h1 {
+h1, h2 {
   font-size: 2em;
-  letter-spacing: 0.2em;
+  letter-spacing: 0;
+  margin-top: 2rem;
 }
 
 h2 {
   font-size: 1.5em;
-  letter-spacing: 0.15em;
 }
 
-h3 {
+h3, h4, h5, h6 {
   font-size: 1em;
   font-weight: bold;
+  margin-top: 1.5rem;
   text-transform: uppercase;
 }
 
 h4, h5, h6 {
   font-size: 0.9em;
-  text-transform: uppercase;
+  margin-top: 1rem;
 }
 
 blockquote {
