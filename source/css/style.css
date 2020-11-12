@@ -176,8 +176,8 @@ body {
   right: calc(100% - 1.5em);
 }
 
-.archive-article-word-count {
-  margin-left: 0.5em;
+.archive-article-title {
+  margin-right: 0.5em;
 }
 
 .archive-article-title {
@@ -185,7 +185,7 @@ body {
   left: 2em;
   letter-spacing: 0;
   margin: 0;
-  max-width: 25rem;
+  max-width: calc(100vw - 6rem);
   position: relative;
   text-align: left;
   text-decoration: none;
