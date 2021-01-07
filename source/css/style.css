@@ -386,6 +386,10 @@ a img:hover {
   transition-property: border;
 }
 
+figcaption {
+  text-align: center;
+}
+
 .article-gallery img, table {
   margin: 1em auto;
 }
