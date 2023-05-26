@@ -30,4 +30,16 @@
     <%- css('css/highlight') %>
   <% } %>
   <%- open_graph() -%>
+
+  <% if (theme.google_analytics.enable && theme.google_analytics.acct_ga4){ %>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<%= theme.google_analytics.acct_ga4 %>"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+  
+      gtag('config', '<%= theme.google_analytics.acct_ga4 %>');
+    </script>
+  <% } %>
 </head>

@@ -23,6 +23,7 @@ word_count: false
 google_analytics:
   enable: false
   acct: "UA-000000000-0"
+  acct_ga4: "G-0000000000"
 
 # IntenseDebate ID
 intensedebate:
