@@ -14,5 +14,9 @@
       <span class="nav-spacer">×</span>
       <a class="nav-link" href="<%- url_for(theme.rss) %>"><%= __('rss_feed') %></a>
     <% } %>
+    <% if (theme.mastadon.enable && theme.mastadon.rel){ %>
+      <span class="nav-spacer">×</span>
+      <a class="nav-link" rel="me" href="<%= theme.mastadon.rel %>">Mastodon</a>
+    <% } %>
   </nav>
 </header>

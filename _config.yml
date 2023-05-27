@@ -29,3 +29,8 @@ google_analytics:
 intensedebate:
   enable: false
   acct: "00000000000000000000000000000000"
+
+# Mastadon link
+mastadon:
+  enable: false
+  rel: "https://some-mastadon-server/@your-username"
