@@ -11,7 +11,7 @@
   <% var i = 0; %>
   <% page.posts.each(function(post, i){ %>
     <% var date_obj = post.date; %>
-    <% var month = post.date.month(); %>
+    <% var month = date(post.date, "YYYY-MM"); %>
     <% if (last != month){ %>
       <% if (last != null){ %>
         </div></section>
